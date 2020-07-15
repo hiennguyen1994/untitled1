@@ -7,6 +7,7 @@ Feature: Login611
     And I input email "<email>"
     And I input password "<password>"
     And I click loginH button
+    dsfdsfdsfdsfdsfdsfdsf
 
     Examples:
       | email               | password |
