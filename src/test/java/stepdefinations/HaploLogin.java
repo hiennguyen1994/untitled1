@@ -42,8 +42,24 @@ public class HaploLogin {
         driver.findElement(By.id("com.northgate.haplo.dev:id/edtPassword")).sendKeys(password);
     }
 
-    @And("^I click loginH button$")
+    @And("^I click login button$")
     public void iClickLoginHButton() {
         driver.findElement(By.id("com.northgate.haplo.dev:id/tvConfirm")).click();
+    }
+
+    @And("^The error message \"([^\"]*)\" is displayed$")
+    public void theErrorMessageIsDisplayed(String errorE) throws Throwable {
+        driver.findElement(By.id("com.northgate.haplo.dev:id/textinput_error")).isDisplayed();
+    }
+
+
+    @Then("^The error message for password\"([^\"]*)\" is displayed$")
+    public void theErrorMessageForPasswordIsDisplayed(String errorP) throws Throwable {
+        driver.findElement(By.id("com.northgate.haplo.dev:id/textinput_error")).isDisplayed();
+    }
+
+    @And("^The error message snackbar \"([^\"]*)\" is displayed$")
+    public void theErrorMessagePromptIsDisplayed(String error) throws Throwable {
+        driver.findElement(By.id("com.northgate.haplo.dev:id/snacksbar_text")).isDisplayed();
     }
 }
