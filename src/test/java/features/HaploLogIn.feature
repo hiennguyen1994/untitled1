@@ -11,6 +11,8 @@ Feature: Login611
     Examples:
       | email   | password | errorE           | errorP                                |
       | hnhaplo | 1234     | Email is invalid | Password must be minimum 8 characters |
+      | hnhaplo@ | 1234gm1     | Email is invalid | Password must be minimum 8 characters |
+      | hnhaplo.com | test    | Email is invalid | Password must be minimum 8 characters |
 
   @appium
   Scenario Outline: Login failed with invalid username and password - account 2
@@ -23,6 +25,9 @@ Feature: Login611
     Examples:
       | email           | password     | error         |
       | hnhap@gmail.com | test1234     | User not found |
+      | hnhaplo+1@gmail.com | 87654321     | Password is incorrect |
+      | hnhaplo+1@gmail.com | test1234     | Password is incorrect |
+      | hnhaplo+02@gmail.com | 12345678     | Password is incorrect |
 
   @appium
   Scenario Outline: Login failed with invalid username and password - account 3
