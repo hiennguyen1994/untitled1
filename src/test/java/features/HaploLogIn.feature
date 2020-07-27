@@ -12,7 +12,6 @@ Feature: Login611
       | email   | password | errorE           | errorP                                |
       | hnhaplo | 1234     | Email is invalid | Password must be minimum 8 characters |
       | hnhaplo@ | 1234gm1     | Email is invalid | Password must be minimum 8 characters |
-      | hnhaplo.com | test    | Email is invalid | Password must be minimum 8 characters |
 
   @appium
   Scenario Outline: Login failed with invalid username and password - account 2
