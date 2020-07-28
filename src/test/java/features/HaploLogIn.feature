@@ -19,14 +19,13 @@ Feature: Login611
     And I click skip intro
     And I input email "<email>"
     And I input password "<password>"
-    And The error message snackbar "<error>" is displayed
-    Then I click login button
+    And I click login button
+    Then The error message snackbar "<error>" is displayed
     Examples:
-      | email           | password     | error         |
-      | hnhap@gmail.com | test1234     | User not found |
-      | hnhaplo+1@gmail.com | 87654321     | Password is incorrect |
-      | hnhaplo+1@gmail.com | test1234     | Password is incorrect |
-      | hnhaplo+02@gmail.com | 12345678     | Password is incorrect |
+      | email                 | password     | error                 |
+      | hnhap@gmail.com       | test1234     | User not found        |
+      | hnhaplo+1@gmail.com   | 87654321     | Password is incorrect |
+      | hnhaplo+02@gmail.com  | 12345678     | User not found        |
 
   @appium
   Scenario Outline: Login failed with invalid username and password - account 3
@@ -34,8 +33,7 @@ Feature: Login611
     And I click skip intro
     And I input email "<email>"
     And I input password "<password>"
-    And The error message snackbar "<error>" is displayed
-    Then I click login button
+    And I click login button
     Examples:
-      | email               | password     | error                |
-      | hnhaplo+1@gmail.com | test1234     | Password is incorrect |
+      | email               | password     |
+      | hnhaplo+1@gmail.com | 12345678     |

@@ -34,12 +34,15 @@ public class HaploLogin {
     public void iInputEmail(String email) throws Throwable {
         driver.findElement(By.id("com.northgate.haplo.dev:id/edtEmail")).clear();
         driver.findElement(By.id("com.northgate.haplo.dev:id/edtEmail")).sendKeys(email);
+        driver.navigate().back();
+
     }
 
     @And("^I input password \"([^\"]*)\"$")
     public void iInputPassword(String password) throws Throwable {
         driver.findElement(By.id("com.northgate.haplo.dev:id/edtPassword")).clear();
         driver.findElement(By.id("com.northgate.haplo.dev:id/edtPassword")).sendKeys(password);
+        driver.navigate().back();
     }
 
     @And("^I click login button$")
