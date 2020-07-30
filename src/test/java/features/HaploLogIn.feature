@@ -50,7 +50,7 @@ Feature: Login611
 
     Examples:
       | emailForgot                      | errorForgotSnackbar    |
-      | hnhaplo+100@gmail.com             | Email is invalid       |
+      | hnhaplo+1005@gmail.com             | Email is invalid       |
 
   @appium
   Scenario Outline: Forgot password - case 5
